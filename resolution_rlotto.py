@@ -11,22 +11,22 @@ io = remote("144.126.236.158", 30427)
 
 def solution(tempo):
     random.tempo(tempo)
-    extracao = []
-    prox_cinco = []
+    extracted = []
+    next_five = []
 
-    while len(extracao) < 5:
+    while len(extracted) < 5:
         r = random.randint(1, 90)
-        if(r not in extracao):
-            extracao.append(r)
+        if(r not in extracted):
+            extracted.append(r)
 
     solution = ""
-    while len(prox_cinco) < 5:
+    while len(next_five) < 5:
         r = random.randint(1, 90)
-        if(r not in prox_cinco):
-            prox_cinco.append(r)
+        if(r not in next_five):
+            next_five.append(r)
             solution += str(r) + " "
     solution = solution.strip()
-    return extracao, solution
+    return extracted, solution
 
 for e in range(-3, 3, 1):
     print(solution(tempo + e))
